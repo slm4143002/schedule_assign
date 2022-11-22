@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+     "target": "es2017",                                  
+    /* Modules */
+    "module": "commonjs",                                
+    "moduleResolution": "node",                      
+     "sourceMap": true,                                
+    // "outFile": "./",                                  
+    "outDir": "./dist",                                 
+    "esModuleInterop": true,                             
+    // "preserveSymlinks": true,                        
+    "forceConsistentCasingInFileNames": true,           
+    /* Type Checking */
+    "strict": true,                                     
+    
+  },
+  "include": ["src/**/*"],
+  "exclude": []
+}
