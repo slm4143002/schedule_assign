@@ -47,7 +47,6 @@ export abstract class AbstractDbDao {
         values: any[][]
     ): Promise<object> => {
         let vParam: any[][];
-        console.log('values.length' + values.length);
         for (let k = 0; k < values.length; ) {
             if (k + 2 >= values.length) {
                 vParam = values.slice(k, values.length);
@@ -75,10 +74,8 @@ export abstract class AbstractDbDao {
         const client = await DbAccesser.pool.connect();
         try {
             await client.query('BEGIN');
-            console.log('limitRows' + limitRows);
             for (let num = 0; num < limitRows; num++) {
                 await client.query(_sql, args[num]);
-                console.log('args[num]' + args[num]);
             }
             await client.query('COMMIT');
             return {

@@ -5,7 +5,7 @@ const router = express.Router();
 // GETリクエスト
 router.get('/', getUserInfo, (req: express.Request, res: express.Response) => {
     try {
-        res.status(200).json(req.body);
+        res.status(200).json({ ok: '成功' });
     } catch (error) {
         res.status(400).json({ message: '' });
     }

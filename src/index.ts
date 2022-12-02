@@ -36,7 +36,7 @@ app.options('*', function (req: any, res: any) {
 app.use('/v1', router);
 
 // 8080
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 // APIサーバ起動
 app.listen(port);
